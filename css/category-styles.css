@@ -1,0 +1,40 @@
+#brands-container {
+  margin: 10%;
+}
+
+#brand-list-container h2 {
+  font-size: 1.8rem;
+  margin: 20px 0 0 0;
+}
+
+#brand-letter-container {
+  margin-top: 60px;
+}
+
+#brand-letter-container ul {
+  list-style-type: none;
+  padding-inline-start: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+}
+
+#brand-letter-container ul li {
+  margin-right: 40px;
+  margin-top: 15px;
+  border-bottom: 1px solid #a0a0a0;
+}
+
+#brand-letter-container ul li:hover {
+  background-color: rgb(247, 190, 144);
+  cursor: pointer;
+}
+
+#brand-letter-container ul li a {
+  padding: 13px 0 13px 15px;
+  text-decoration: none;
+  color: black;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}

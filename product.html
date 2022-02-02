@@ -5,8 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/product-styles.css" />
   </head>
   <body>
-    <h1>Product</h1>
+    <div class="product-container">
+      <img
+        src="https://kea-alt-del.dk/t7/images/jpg/1000/1531.jpg"
+        alt="large product image"
+        width="550"
+      />
+      <div class="product-details-container">
+        <h1>Puma</h1>
+        <h2>T-Shirt</h2>
+        <h3>499,99 kr</h3>
+        <div class="product-form-container">
+          <form action="">
+            <div>
+              <select name="size" id="size">
+                <option value="" disabled selected>Choose size</option>
+                <option value="small">S</option>
+                <option value="medium">M</option>
+                <option value="large">L</option>
+                <option value="xlarge">XL</option>
+              </select>
+            </div>
+            <div>
+              <button>Add to cart</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
