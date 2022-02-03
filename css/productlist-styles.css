@@ -106,4 +106,13 @@
   .product-list-type {
     margin-top: 10px;
   }
+
+  .sold-out {
+    width: 100px;
+    height: 130px;
+  }
+
+  .sold-out p {
+    font-size: 1rem;
+  }
 }
