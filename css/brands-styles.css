@@ -1,5 +1,11 @@
 #brands-container {
-  margin: 10%;
+  margin: 5% 10% 5% 10%;
+}
+
+#brands-container h1 {
+  font-size: 2.5rem;
+  text-decoration: underline rgb(236, 137, 56);
+  text-underline-position: under;
 }
 
 #brand-list-container h2 {
@@ -7,11 +13,11 @@
   margin: 20px 0 0 0;
 }
 
-#brand-letter-container {
+.brand-letter-container {
   margin-top: 60px;
 }
 
-#brand-letter-container ul {
+.brand-letter-container ul {
   list-style-type: none;
   padding-inline-start: 0;
   margin: 0;
@@ -19,18 +25,18 @@
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
 }
 
-#brand-letter-container ul li {
+.brand-letter-container ul li {
   margin-right: 40px;
   margin-top: 15px;
   border-bottom: 1px solid #a0a0a0;
 }
 
-#brand-letter-container ul li:hover {
+.brand-letter-container ul li:hover {
   background-color: rgb(247, 190, 144);
   cursor: pointer;
 }
 
-#brand-letter-container ul li a {
+.brand-letter-container ul li a {
   padding: 13px 0 13px 15px;
   text-decoration: none;
   color: black;

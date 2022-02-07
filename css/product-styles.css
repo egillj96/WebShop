@@ -6,16 +6,27 @@
 
 .product-details-container h1 {
   margin: 10px 0 0 0;
+  font-size: 1.5rem;
 }
 
 .product-details-container h2 {
-  font-size: 4rem;
+  font-size: 2rem;
   font-weight: 400;
   margin: 0;
 }
 
 .product-details-container h3 {
+  margin: 20px 0 0 0;
+}
+
+.product-details-container h4 {
+  font-weight: 500;
+  font-size: 0.8rem;
   margin: 40px 0 0 0;
+}
+
+.product-details-container h4 span {
+  font-weight: 700;
 }
 
 .product-form-container {
@@ -27,19 +38,32 @@
 .product-details-container select {
   padding: 20px 20px 20px 10px;
   width: 400px;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: rgb(148, 148, 148);
   font-weight: 300;
+  cursor: pointer;
+  border: 1px solid rgb(53, 53, 53);
+}
+
+.product-details-container select:hover {
+  border: solid 1px rgb(236, 137, 56);
 }
 
 .product-details-container button {
   padding: 20px 20px 20px 10px;
   width: 400px;
   margin-top: 20px;
-  font-size: 1.2rem;
-  background-color: #3b3b3b;
+  font-size: 1rem;
+  background-color: #1b1b1b;
   color: white;
   font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+.product-details-container button:hover {
+  background-color: rgb(236, 137, 56);
 }
 
 @media screen and (min-width: 800px) {

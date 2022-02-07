@@ -9,33 +9,45 @@
     <link rel="stylesheet" href="css/product-styles.css" />
   </head>
   <body>
-    <div class="product-container">
-      <img
-        src="https://kea-alt-del.dk/t7/images/jpg/1000/1531.jpg"
-        alt="large product image"
-        width="550"
-      />
-      <div class="product-details-container">
-        <h1>Puma</h1>
-        <h2>T-Shirt</h2>
-        <h3>499,99 kr</h3>
-        <div class="product-form-container">
-          <form action="">
-            <div>
-              <select name="size" id="size">
-                <option value="" disabled selected>Choose size</option>
-                <option value="small">S</option>
-                <option value="medium">M</option>
-                <option value="large">L</option>
-                <option value="xlarge">XL</option>
-              </select>
-            </div>
-            <div>
-              <button>Add to cart</button>
-            </div>
-          </form>
+    <header>
+      <nav>
+        <a href="index.html" aria-label="Nav logo"
+          ><img id="nav-logo" src="logo.svg" alt="Navbar logo" width="200"
+        /></a>
+        <ul>
+          <li><a href="category.html">All products</a></li>
+          <li><a href="category.html">Categories</a></li>
+          <li><a href="category.html">Brands</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="product-container">
+        <img src="" alt="large product image" width="550" />
+        <div class="product-details-container">
+          <h1 class="product-brand"></h1>
+          <h2 class="product-name"></h2>
+          <h3 class="product-price"></h3>
+          <h4>Color: <span class="product-color"></span></h4>
+          <div class="product-form-container">
+            <form action="">
+              <div>
+                <select name="size" id="size">
+                  <option value="" disabled selected>Choose size</option>
+                  <option value="small">S</option>
+                  <option value="medium">M</option>
+                  <option value="large">L</option>
+                  <option value="xlarge">XL</option>
+                </select>
+              </div>
+              <div>
+                <button>Add to cart</button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
+    </main>
+    <script src="js/product.js"></script>
   </body>
 </html>

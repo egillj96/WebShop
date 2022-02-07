@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brands</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/brands-styles.css" />
+  </head>
+  <header>
+    <nav>
+      <a href="index.html" aria-label="Nav logo"
+        ><img id="nav-logo" src="logo.svg" alt="Navbar logo" width="200"
+      /></a>
+      <ul>
+        <li><a href="category.html">All products</a></li>
+        <li><a href="category.html">Categories</a></li>
+        <li><a href="#">Brands</a></li>
+      </ul>
+    </nav>
+  </header>
+  <body>
+    <div id="brands-container">
+      <h1>Brands</h1>
+      <div id="brand-list-container">
+        <template id="brand-letter-template">
+          <div class="brand-letter-container">
+            <h2 class="brand-letter"></h2>
+            <ul>
+              <template id="brand-link-template">
+                <li>
+                  <a href="" aria-label="brand-link" class="brand-link"></a>
+                </li>
+              </template>
+            </ul>
+          </div>
+        </template>
+      </div>
+    </div>
+    <script src="js/brands.js"></script>
+  </body>
+</html>
