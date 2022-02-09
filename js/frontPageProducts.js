@@ -14,6 +14,28 @@ function showProduct(product) {
   const template = document.querySelector("template").content;
   const clone = template.cloneNode(true);
 
+  let productCard = clone.querySelector(".product-card");
+
+  if (product.soldout) {
+    let soldOutDiv = document.createElement("div");
+    soldOutDiv.className = "sold-out";
+    let soldOutText = document.createElement("p");
+    soldOutText.textContent = "Sold Out";
+
+    soldOutDiv.appendChild(soldOutText);
+    productCard.appendChild(soldOutDiv);
+  }
+
+  if (product.discount) {
+    console.log(product);
+
+    let discountParagraph = document.createElement("p");
+    discountParagraph.className = "product-discount";
+    discountParagraph.textContent = `-${product.discount}%`;
+
+    productCard.appendChild(discountParagraph);
+  }
+
   clone.querySelector("a").href = `product.html?id=${product.id}`;
 
   clone.querySelector(

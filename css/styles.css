@@ -52,3 +52,31 @@ nav ul li a:hover {
     font-size: 2.5vw;
   }
 }
+
+.popular-brands-container {
+  margin: 5% 10% 5% 10%;
+}
+
+.popular-brands-container h1 {
+  font-size: 2.5rem;
+  text-decoration: underline rgb(236, 137, 56);
+  text-underline-position: under;
+}
+
+.brand-logo-container {
+  display: flex;
+  column-gap: 30px;
+  row-gap: 30px;
+  flex-wrap: wrap;
+}
+
+.brand-logo-container img {
+  object-fit: cover;
+}
+
+@media screen and (max-width: 840px) {
+  .brand-logo-container img {
+    width: 100px;
+    height: 100px;
+  }
+}
