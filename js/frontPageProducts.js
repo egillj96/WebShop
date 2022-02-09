@@ -1,4 +1,4 @@
-const url = "https://kea-alt-del.dk/t7/api/products";
+const url = "https://kea-alt-del.dk/t7/api/products?limit=8";
 
 fetch(url)
   .then((res) => res.json())
@@ -13,6 +13,8 @@ function showProduct(product) {
 
   const template = document.querySelector("template").content;
   const clone = template.cloneNode(true);
+
+  clone.querySelector("a").href = `product.html?id=${product.id}`;
 
   clone.querySelector(
     ".product-card img"

@@ -1,15 +1,32 @@
-const url = "https://kea-alt-del.dk/t7/api/products/2200";
+const browserUrl = window.location.search;
+const urlParams = new URLSearchParams(browserUrl);
+console.log(urlParams.get("id"));
+
+const url = `https://kea-alt-del.dk/t7/api/products/${urlParams.get("id")}`;
 
 fetch(url)
   .then((res) => res.json())
   .then((data) => showProduct(data));
 
 function showProduct(product) {
-  console.log(product);
+  if (product.soldout) {
+    let soldOutParagraph = document.createElement("p");
+    soldOutParagraph.textContent = "This product is unfortunately sold out";
+
+    document
+      .querySelector(".product-form-container")
+      .appendChild(soldOutParagraph);
+
+    document.querySelector("button").disabled = true;
+  }
 
   document.querySelector(
     ".product-details-container .product-brand"
   ).textContent = product.brandname;
+
+  document.querySelector(
+    ".product-details-container a"
+  ).href = `/productlist.html?brand=${product.brandname}`;
 
   document.querySelector(
     ".product-details-container .product-name"
@@ -26,7 +43,13 @@ function showProduct(product) {
   document.querySelector(".product-container img").alt =
     product.productdisplayname;
 
-  document.querySelector(
-    ".product-details-container .product-color"
-  ).textContent = product.basecolour;
+  if (product.colour1 === "NA" || product.colour1 === "") {
+    document.querySelector(
+      ".product-details-container .product-color"
+    ).textContent = product.basecolour;
+  } else {
+    document.querySelector(
+      ".product-details-container .product-color"
+    ).textContent = product.basecolour + ", " + product.colour1;
+  }
 }

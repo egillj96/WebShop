@@ -17,93 +17,30 @@
         <ul>
           <li><a href="category.html">All products</a></li>
           <li><a href="category.html">Categories</a></li>
-          <li><a href="category.html">Brands</a></li>
+          <li><a href="brands.html">Brands</a></li>
         </ul>
       </nav>
     </header>
     <div class="products-container">
       <h1>Products</h1>
-      <h2>Puma</h2>
+      <template id="header-template">
+        <h2 id="brand-name-header"></h2>
+      </template>
       <div class="products-list-container">
-        <a href="product.html">
-          <div class="product-card">
-            <img
-              src="https://kea-alt-del.dk/t7/images/jpg/640/1531.jpg"
-              alt="product image"
-              width="250"
-            />
-            <div class="brand-type-container">
-              <p class="product-list-brand">Puma</p>
-              <p class="product-list-price">499,00 kr</p>
+        <template id="product-list-template">
+          <a href="#" aria-label="product-card-link">
+            <div class="product-card">
+              <img src="" alt="" />
+              <div class="brand-type-container">
+                <p class="product-list-brand"></p>
+                <p class="product-list-price"></p>
+              </div>
+              <p class="product-list-type"></p>
             </div>
-            <p class="product-list-type">T-shirt</p>
-          </div>
-        </a>
-        <a href="product.html">
-          <div class="product-card">
-            <img
-              src="https://kea-alt-del.dk/t7/images/jpg/640/1532.jpg"
-              alt="product image"
-              width="250"
-            />
-            <p class="product-discount">-25%</p>
-            <div class="brand-type-container">
-              <p class="product-list-brand">Puma</p>
-              <p class="product-list-price">499,00 kr</p>
-            </div>
-            <p class="product-list-type">T-shirt</p>
-          </div>
-        </a>
-        <a href="product.html">
-          <div class="product-card">
-            <img
-              src="https://kea-alt-del.dk/t7/images/jpg/640/1530.jpg"
-              alt="product image"
-              width="250"
-            />
-            <div class="sold-out">
-              <p>Sold Out</p>
-            </div>
-            <div class="brand-type-container">
-              <p class="product-list-brand">Puma</p>
-              <p class="product-list-price">499,00 kr</p>
-            </div>
-            <p class="product-list-type">T-shirt</p>
-          </div>
-        </a>
-        <a href="product.html">
-          <div class="product-card">
-            <img
-              src="https://kea-alt-del.dk/t7/images/jpg/640/1533.jpg"
-              alt="product image"
-              width="250"
-            />
-            <p class="product-discount">-35%</p>
-            <div class="brand-type-container">
-              <p class="product-list-brand">Puma</p>
-              <p class="product-list-price">499,00 kr</p>
-            </div>
-            <p class="product-list-type">T-shirt</p>
-          </div>
-        </a>
-        <a href="product.html">
-          <div class="product-card">
-            <img
-              src="https://kea-alt-del.dk/t7/images/jpg/640/1534.jpg"
-              alt="product image"
-              width="250"
-            />
-            <div class="sold-out">
-              <p>Sold Out</p>
-            </div>
-            <div class="brand-type-container">
-              <p class="product-list-brand">Puma</p>
-              <p class="product-list-price">499,00 kr</p>
-            </div>
-            <p class="product-list-type">T-shirt</p>
-          </div>
-        </a>
+          </a>
+        </template>
       </div>
     </div>
+    <script src="js/productlist.js"></script>
   </body>
 </html>

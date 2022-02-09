@@ -4,6 +4,21 @@
   margin: 10%;
 }
 
+.product-container img {
+  width: 80%;
+  object-fit: cover;
+}
+
+.product-details-container {
+  margin-left: 0;
+  margin-top: 40px;
+}
+
+.product-details-container a {
+  text-decoration: none;
+  color: black;
+}
+
 .product-details-container h1 {
   margin: 10px 0 0 0;
   font-size: 1.5rem;
@@ -57,17 +72,34 @@
   background-color: #1b1b1b;
   color: white;
   font-weight: bold;
-  cursor: pointer;
   outline: none;
   border: none;
 }
 
 .product-details-container button:hover {
   background-color: rgb(236, 137, 56);
+  cursor: pointer;
+}
+
+.product-details-container button:disabled {
+  background-color: rgb(207, 207, 207);
+  opacity: 0.8;
+}
+
+.product-details-container button:disabled:hover {
+  cursor: default;
 }
 
 @media screen and (min-width: 800px) {
   .product-container {
     flex-direction: row;
+  }
+
+  .product-details-container {
+    margin-left: 60px;
+  }
+
+  .product-container img {
+    width: 40%;
   }
 }

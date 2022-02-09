@@ -44,10 +44,13 @@ function showBrand(brand) {
   const clone = brandTemplate.cloneNode(true);
 
   brand.brandname = brand.brandname.toString();
-  console.log(brand);
+  //console.log(brand);
 
   if (uniqueLetterArray.includes(brand.brandname[0].toString())) {
     clone.querySelector(".brand-link").textContent = brand.brandname;
+    clone.querySelector(
+      ".brand-link"
+    ).href = `/productlist.html?brand=${brand.brandname}`;
 
     const parent = document.querySelector(
       "#brand-letter-" + brand.brandname[0].toString() + " ul"
