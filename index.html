@@ -16,7 +16,18 @@
         /></a>
         <ul>
           <li><a href="category.html">All products</a></li>
-          <li><a href="category.html">Categories</a></li>
+          <li>
+            <a href="category.html">Categories</a>
+            <template id="category-template">
+              <div class="category-dropdown">
+                <ul class="category-list">
+                  <template id="category-link-template">
+                    <li><a href="" aria-label="category-link"></a></li>
+                  </template>
+                </ul>
+              </div>
+            </template>
+          </li>
           <li><a href="brands.html">Brands</a></li>
         </ul>
       </nav>
@@ -70,7 +81,7 @@
       <section class="products-container">
         <h1>Featured products</h1>
         <div class="products-list-container"></div>
-        <template>
+        <template id="front-page-products-template">
           <a href="product.html">
             <div class="product-card">
               <img src="" alt="product image" width="250" />
@@ -85,5 +96,6 @@
       </section>
     </main>
     <script src="js/frontPageProducts.js"></script>
+    <script src="js/categories.js"></script>
   </body>
 </html>

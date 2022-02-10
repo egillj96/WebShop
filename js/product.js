@@ -9,6 +9,14 @@ fetch(url)
   .then((data) => showProduct(data));
 
 function showProduct(product) {
+  const brandBreadcrumb = document.querySelector(".brand-breadcrumb");
+  brandBreadcrumb.textContent = product.brandname;
+  brandBreadcrumb.href = `/productlist.html?brand=${product.brandname}`;
+
+  const productBreadcrumb = document.querySelector(".product-breadcrumb");
+  productBreadcrumb.textContent = product.productdisplayname;
+  productBreadcrumb.href = `product.html?id=${product.id}`;
+  document.querySelector("title").textContent = product.productdisplayname;
   if (product.soldout) {
     let soldOutParagraph = document.createElement("p");
     soldOutParagraph.textContent = "This product is unfortunately sold out";

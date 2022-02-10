@@ -9,9 +9,9 @@ function showProducts(products) {
 }
 
 function showProduct(product) {
-  console.log(product);
-
-  const template = document.querySelector("template").content;
+  const template = document.querySelector(
+    "#front-page-products-template"
+  ).content;
   const clone = template.cloneNode(true);
 
   let productCard = clone.querySelector(".product-card");
@@ -27,8 +27,6 @@ function showProduct(product) {
   }
 
   if (product.discount) {
-    console.log(product);
-
     let discountParagraph = document.createElement("p");
     discountParagraph.className = "product-discount";
     discountParagraph.textContent = `-${product.discount}%`;

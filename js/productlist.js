@@ -1,9 +1,21 @@
 const browserUrl = window.location.search;
 const urlParams = new URLSearchParams(browserUrl);
 
-const url = `https://kea-alt-del.dk/t7/api/products?brandname=${urlParams.get(
-  "brand"
-)}`;
+const brand = urlParams.get("brand");
+const category = urlParams.get("category");
+console.log(category);
+
+let url = "";
+
+if (brand) {
+  url = `https://kea-alt-del.dk/t7/api/products?brandname=${brand}`;
+} else {
+  url = `https://kea-alt-del.dk/t7/api/products?category=${category}`;
+}
+
+const brandBreadcrumb = document.querySelector(".brand-breadcrumb");
+brandBreadcrumb.textContent = brand;
+brandBreadcrumb.href = `/productlist.html?brand=${brand}`;
 
 fetch(url)
   .then((res) => res.json())
@@ -16,7 +28,11 @@ function showProducts(products) {
   if (products.length === 0) {
     headerClone.querySelector("h2").textContent = "No products to show";
   } else {
-    headerClone.querySelector("h2").textContent = products[0].brandname;
+    if (brand) {
+      headerClone.querySelector("h2").textContent = products[0].brandname;
+    } else {
+      headerClone.querySelector("h2").textContent = products[0].category;
+    }
   }
 
   const headerParent = document.querySelector(".products-container");

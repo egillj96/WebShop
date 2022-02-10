@@ -4,7 +4,7 @@
 
 #brands-container h1 {
   font-size: 2.5rem;
-  text-decoration: underline rgb(236, 137, 56);
+  text-decoration: underline var(--primary-color);
   text-underline-position: under;
 }
 
@@ -32,7 +32,7 @@
 }
 
 .brand-letter-container ul li:hover {
-  background-color: rgb(247, 190, 144);
+  background-color: var(--secondary-color);
   cursor: pointer;
 }
 

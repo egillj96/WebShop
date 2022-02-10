@@ -1,10 +1,17 @@
+:root {
+  --background-color: rgb(253, 237, 219);
+  --primary-color: rgb(236, 137, 56);
+  --secondary-color: rgb(247, 190, 144);
+  --first-container-margin: 3% 10% 5% 10%;
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: rgb(253, 237, 219);
+  background-color: var(--background-color);
 }
 
 nav {
@@ -23,10 +30,40 @@ nav > a {
   width: 120px;
 }
 
-nav ul {
+nav > ul {
   width: 60%;
   display: flex;
   list-style-type: none;
+}
+
+nav > ul > li:nth-child(2) {
+  position: relative;
+  height: 30px;
+}
+
+nav > ul li:nth-child(2):hover .category-list {
+  display: block;
+}
+
+.category-dropwdown {
+  position: absolute;
+  display: inline-block;
+}
+
+nav .category-list {
+  position: absolute;
+  top: 30px;
+  padding: 5px 0px;
+  list-style-type: none;
+  padding-inline-start: 0;
+  background-color: white;
+  display: none;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+nav .category-list li {
+  padding: 14px 14px;
+  font-size: 0.8rem;
 }
 
 nav ul li {
@@ -40,7 +77,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: rgb(247, 190, 144);
+  color: var(--secondary-color);
 }
 
 @media screen and (max-width: 600px) {
@@ -59,7 +96,7 @@ nav ul li a:hover {
 
 .popular-brands-container h1 {
   font-size: 2.5rem;
-  text-decoration: underline rgb(236, 137, 56);
+  text-decoration: underline var(--primary-color);
   text-underline-position: under;
 }
 
@@ -79,4 +116,26 @@ nav ul li a:hover {
     width: 100px;
     height: 100px;
   }
+}
+
+.breadcrumb-container {
+  margin-bottom: 40px;
+  margin-left: 10%;
+  margin-top: 3%;
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb-container span {
+  margin-right: 30px;
+}
+
+.breadcrumb-container a {
+  text-decoration: none;
+  color: black;
+}
+
+.breadcrumb-container .selected-crumb {
+  font-weight: 700;
+  text-decoration: underline black;
 }
