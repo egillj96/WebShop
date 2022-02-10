@@ -23,7 +23,7 @@ function showCategory(category) {
   linkClone.querySelector("a").textContent = category.category;
   linkClone.querySelector(
     "a"
-  ).href = `/productlist.html?category=${category.category}`;
+  ).href = `productlist.html?category=${category.category}`;
 
   const linkParent = document.querySelector(".category-list");
   linkParent.appendChild(linkClone);

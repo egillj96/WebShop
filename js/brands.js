@@ -50,7 +50,7 @@ function showBrand(brand) {
     clone.querySelector(".brand-link").textContent = brand.brandname;
     clone.querySelector(
       ".brand-link"
-    ).href = `/productlist.html?brand=${brand.brandname}`;
+    ).href = `productlist.html?brand=${brand.brandname}`;
 
     const parent = document.querySelector(
       "#brand-letter-" + brand.brandname[0].toString() + " ul"

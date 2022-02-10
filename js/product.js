@@ -34,7 +34,7 @@ function showProduct(product) {
 
   document.querySelector(
     ".product-details-container a"
-  ).href = `/productlist.html?brand=${product.brandname}`;
+  ).href = `productlist.html?brand=${product.brandname}`;
 
   document.querySelector(
     ".product-details-container .product-name"

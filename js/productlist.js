@@ -15,7 +15,7 @@ if (brand) {
 
 const brandBreadcrumb = document.querySelector(".brand-breadcrumb");
 brandBreadcrumb.textContent = brand;
-brandBreadcrumb.href = `/productlist.html?brand=${brand}`;
+brandBreadcrumb.href = `productlist.html?brand=${brand}`;
 
 fetch(url)
   .then((res) => res.json())
