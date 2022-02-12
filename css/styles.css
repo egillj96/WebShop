@@ -9,6 +9,11 @@
   box-sizing: border-box;
 }
 
+h1 {
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   background-color: var(--background-color);
@@ -91,7 +96,11 @@ nav ul li a:hover {
 }
 
 .popular-brands-container {
-  margin: 5% 10% 5% 10%;
+  background-color: var(--secondary-color);
+}
+
+.popular-brands-container > div {
+  padding: 1% 10% 7% 10%;
 }
 
 .popular-brands-container h1 {
@@ -101,6 +110,7 @@ nav ul li a:hover {
 }
 
 .brand-logo-container {
+  margin-top: 60px;
   display: flex;
   column-gap: 30px;
   row-gap: 30px;
@@ -138,4 +148,73 @@ nav ul li a:hover {
 .breadcrumb-container .selected-crumb {
   font-weight: 700;
   text-decoration: underline black;
+}
+
+.front-page {
+  margin: 5% 10% 25% 10%;
+  display: flex;
+  position: relative;
+}
+
+.front-page h1 {
+  font-size: 4.6rem;
+  margin: 0;
+  line-height: 80px;
+  margin-bottom: 20px;
+}
+
+.front-page h2 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-top: 3px;
+  margin-bottom: 60px;
+}
+
+.front-page img {
+  position: absolute;
+  object-fit: cover;
+  left: -80px;
+  top: -100px;
+  z-index: -1;
+  opacity: 0.2;
+  width: 150%;
+  height: 600px;
+}
+
+.front-page a {
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  background-color: var(--primary-color);
+  padding: 18px 80px;
+  transition: all 0.2s ease-in-out;
+}
+
+.front-page a:hover {
+  background-color: var(--secondary-color);
+}
+
+@media screen and (min-width: 900px) {
+  .front-page {
+    margin: 5% 10% 10% 10%;
+    position: initial;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+  }
+
+  .front-page div {
+    margin-bottom: 60px;
+  }
+
+  .front-page h1 {
+    font-size: 5.5rem;
+  }
+
+  .front-page img {
+    position: initial;
+    width: 40%;
+    height: 40%;
+    opacity: 1;
+  }
 }

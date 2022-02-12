@@ -14,9 +14,20 @@
         ><img id="nav-logo" src="logo.svg" alt="Navbar logo" width="200"
       /></a>
       <ul>
-        <li><a href="category.html">All products</a></li>
-        <li><a href="category.html">Categories</a></li>
-        <li><a href="#">Brands</a></li>
+        <li><a href="#">All products</a></li>
+        <li>
+          <a href="#">Categories</a>
+          <template id="category-template">
+            <div class="category-dropdown">
+              <ul class="category-list">
+                <template id="category-link-template">
+                  <li><a href="" aria-label="category-link"></a></li>
+                </template>
+              </ul>
+            </div>
+          </template>
+        </li>
+        <li><a href="brands.html">Brands</a></li>
       </ul>
     </nav>
   </header>
@@ -45,6 +56,7 @@
       </div>
     </div>
     <script src="js/brands.js"></script>
+    <script src="js/categories.js"></script>
   </body>
 </main>
 </html>
